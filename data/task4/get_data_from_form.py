@@ -3,6 +3,7 @@ import re
 def get_keys_values(tables):
     keys = []
     values = []
+    
     for cell in tables[0].find_all('tr', class_='left'):
         keys.append(cell.find('span').text)
         values.append(cell.find_next_sibling().find('span').text)
